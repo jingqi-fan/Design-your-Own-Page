@@ -1,0 +1,87 @@
+/* Header styles for a fixed position at the top of the viewport with flexible box layout */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Flex container for left and right groups of the header */
+.left-group, .right-group {
+    display: flex;
+    align-items: center;
+}
+
+/* General button styles in the header */
+.head-button {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Styles for the dropdown button */
+.dropbtn {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Positioning context for dropdown content */
+.dropdown {
+    position: relative;
+}
+
+/* Hidden dropdown content that becomes visible on hover */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Styling for links inside dropdown, default state */
+.dropdown-content h:link {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+}
+
+/* Hover state for links inside dropdown */
+.dropdown-content h:link:hover {
+    background-color: #f1f1f1;
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change dropdown button background on hover */
+.dropdown:hover .dropbtn {
+    background-color: #0056b3;
+}

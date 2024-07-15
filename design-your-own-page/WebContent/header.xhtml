@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <!-- Page title -->
+    <title>Jingqi Fan's Page</title>
+    <!-- Link to external CSS for styling -->
+    <h:outputStylesheet library="css" name="indexStyle.css" />
+</h:head>
+<h:body>
+    <ui:composition>
+        <!-- Header section containing the title and navigation menu -->
+        <div class="header">
+            <!-- Group on the left for home link and dropdown for examples -->
+            <div class="left-group">
+                <h:link outcome="index" styleClass="head-button" style="background-color: #{showInfoBean.colorScheme.color2};">Home</h:link>
+                <!-- Dropdown menu for example pages -->
+                <div class="dropdown">
+                    <button class="dropbtn" style="background-color: #{showInfoBean.colorScheme.color3};">&#9660; Examples</button>
+                    <div class="dropdown-content">
+                        <h:link outcome="page_example1" styleClass="head-button" style="background-color: #{showInfoBean.colorScheme.color1};">Example 1</h:link>
+                        <h:link outcome="page_example2" styleClass="head-button" style="background-color: #{showInfoBean.colorScheme.color2};">Example 2</h:link>
+                        <h:link outcome="page_example3" styleClass="head-button" style="background-color: #{showInfoBean.colorScheme.color3};">Example 3</h:link>
+                        <h:link outcome="page_example4" styleClass="head-button" style="background-color: #{showInfoBean.colorScheme.color4};">Example 4</h:link>
+                    </div>
+                </div>
+            </div>
+            <!-- Right group for login link -->
+            <div class="right-group">
+                <!-- Link to login page, styled dynamically -->
+                <h:link outcome="login" styleClass="head-button" style="background-color: #{showInfoBean.colorScheme.color4};">Begin to design your Page!</h:link>
+            </div>
+        </div>
+    </ui:composition>
+</h:body>
+</html>

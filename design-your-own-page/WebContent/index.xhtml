@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <!-- Page title -->
+    <title>Welcome</title>
+    <!-- Link to external CSS file for styling -->
+    <h:outputStylesheet library="css" name="indexStyle.css" />
+</h:head>
+<h:body>
+    <!-- Main image for the header, stored in the 'images' library -->
+    <h:graphicImage library="images" name="index.png" styleClass="header-image"/>
+
+    <!-- First grid container for layout samples -->
+    <div class="grid-container">
+        <h:form>
+            <!-- Image and description for the first layout sample -->
+            <h:graphicImage library="images" name="sample1.png" styleClass="grid-image"/>
+            <p class="image-title">Minimalist Layout</p>
+            <p class="image-description">Provide a clean, straightforward presentation of information, enhancing readability and visual appeal.</p>
+            <!-- Link to view more details about the Minimalist Layout -->
+            <h:commandLink action="page_example1" styleClass="image-description-link">
+                <p class="image-description"> → view details</p>
+            </h:commandLink>
+        </h:form>
+        <h:form>
+            <!-- Image and description for the second layout sample -->
+            <h:graphicImage library="images" name="sample2.png" styleClass="grid-image"/>
+            <p class="image-title">Minimalist Layout wiht Two-column</p>
+            <p class="image-description">Adapt minimalist layout by showing projects with two-colomn, allowing for a quick scan of project details.</p>
+            <!-- Link to view more details about the Two-column Layout -->
+            <h:commandLink action="page_example2" styleClass="image-description-link">
+                <p class="image-description"> → view details</p>
+            </h:commandLink>
+        </h:form>
+    </div>>
+
+    <!-- Second grid container for additional layout samples -->
+    <div class="grid-container">
+        <h:form>
+            <!-- Image and description for the third layout sample -->
+            <h:graphicImage library="images" name="sample3.png" styleClass="grid-image"/>
+            <p class="image-title">Sidebar Layout</p>
+            <p class="image-description">Separate content into a sidebar and a main content area, ensuring that essential personal details are immediately noticeable.</p>
+            <!-- Link to view more details about the Sidebar Layout -->
+            <h:commandLink action="page_example3" styleClass="image-description-link">
+                <p class="image-description"> → view details</p>
+            </h:commandLink>
+        </h:form>
+        <h:form>
+            <!-- Image and description for the fourth layout sample -->
+            <h:graphicImage library="images" name="sample4.png" styleClass="grid-image"/>
+            <p class="image-title">Hero Header Layout</p>
+            <p class="image-description">Focuse on a hero header showcasing your name and then change into a more detailed split layout.</p>
+            <!-- Link to view more details about the Hero Header Layout -->
+            <h:commandLink action="page_example4" styleClass="image-description-link">
+                <p class="image-description"> → view details</p>
+            </h:commandLink>
+        </h:form>
+    </div>
+
+    <!-- Footer container with copyright information -->
+    <div class="footer-container">
+        <div class="footer">
+            <p>Copyright &copy; Jingqi Fan, 2024</p>
+        </div>
+    </div>
+</h:body>
+</html>

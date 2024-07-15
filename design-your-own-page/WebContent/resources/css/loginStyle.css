@@ -1,0 +1,89 @@
+/* Main body style, setting the background, and aligning all content centrally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("#{resource['images:background2.jpg']}") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Styling for main container where forms or content will be placed */
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Common style for form groups to manage layout */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Unified style for all input types and buttons for consistency */
+input[type="text"], input[type="password"], input[type="submit"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Specific styling for submit inputs and buttons */
+input[type="submit"], button {
+    background-color: #6a8fbd;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover effect for submit inputs and buttons */
+input[type="submit"]:hover, button:hover {
+    background-color: #0056b3;
+}
+
+/* Style adjustments for non-background buttons */
+button {
+    background: none;
+    border: none;
+    color: #6a8fbd;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for specific register buttons */
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #debfbe;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Hover effect for register buttons */
+.register-button:hover {
+    background-color: #cc918f; /* 鼠标悬停效果 */
+}
+
+/* Styling for index buttons with a consistent theme */
+.index-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #dfc7a1;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* 与其他输入框保持一致的间距 */
+}
+
+/* Hover effect for index buttons */
+.index-button:hover {
+    background-color: #be9971; /* 鼠标悬停效果 */
+}

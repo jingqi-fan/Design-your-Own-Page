@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Design your own page!</title>
+    <h:outputStylesheet library="css" name="designStyle.css" />
+    <script type="text/javascript">
+        // Function to hide all sections and show only the selected one
+        function showSection(sectionId) {
+            var sections = ['basic-info', 'project-detail', 'color-scheme', 'background-and-font'];
+            sections.forEach(function(section) {
+                document.getElementById(section).style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Function to navigate to the next section
+        function nextSection(currentSection) {
+            var sections = ['basic-info', 'project-detail', 'color-scheme', 'background-and-font'];
+            var currentIndex = sections.indexOf(currentSection);
+            if (currentIndex >= sections.length - 1) {
+                return;
+            }
+            showSection(sections[currentIndex + 1]);
+        }
+
+        // Function to navigate back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</h:head>
+<h:body>
+    <div class="header">
+        <button class="back-button" onclick="goBack();"></button>
+        <h:button value="1" onclick="showSection('basic-info'); return false;" styleClass="header-button">Basic Information</h:button>
+        <h:button value="2" onclick="showSection('project-detail'); return false;" styleClass="header-button">Project Details</h:button>
+        <h:button value="3" onclick="showSection('color-scheme'); return false;" styleClass="header-button">Color Scheme</h:button>
+        <h:button value="4" onclick="showSection('background-and-font'); return false;" styleClass="header-button">Font and Size</h:button>
+    </div>
+    <h:form>
+        <!-- Basic Information Section -->
+        <div id="basic-info" class="profile-form">
+            <h:outputLabel for="name" value="Name:" />
+            <h:inputText id="name" value="#{userProfileBean.profile.name}" required="true" />
+
+            <h:outputLabel for="bio" value="Biography:" />
+            <h:inputTextarea id="bio" value="#{userProfileBean.profile.bio}" rows="4" cols="50" />
+
+            <h:outputLabel for="email" value="Email:" />
+            <h:inputText id="email" value="#{userProfileBean.profile.email}" type="email" />
+
+            <h:outputLabel for="phone" value="Phone Number:" />
+            <h:inputText id="phone" value="#{userProfileBean.profile.phone}" />
+
+            <h:outputLabel for="address" value="Adress:" />
+            <h:inputText id="address" value="#{userProfileBean.profile.address}" />
+
+            <h:outputLabel for="linkedin" value="LinkedIn:" />
+            <h:inputText id="linkedin" value="#{userProfileBean.profile.linkedin}" />
+
+            <h:outputLabel for="github" value="GitHub:" />
+            <h:inputText id="github" value="#{userProfileBean.profile.github}" />
+
+            <div class="userButton-container">
+                <h:commandButton value="Confirm" type="button" onclick="nextSection('basic-info');" styleClass="user-button" />
+            </div>
+        </div>
+
+        <!-- Project Details Section -->
+        <div id="project-detail" class="profile-form hidden">
+            <h2>Project 1</h2>
+            <!-- Input fields for project details -->
+            <!-- Further sections for additional project details and project 2 with similar structure -->
+            <!-- Each section includes fields for project title, summary, type, link, keywords, and collaborators -->
+
+            <h:outputLabel for="title1" value="Title:" />
+            <h:inputText id="title1" value="#{userProfileBean.project1.title}" required="true" />
+
+            <h:outputLabel for="summary1" value="Summary:" />
+            <h:inputTextarea id="summary1" value="#{userProfileBean.project1.summary}" required="true" />
+
+            <h:outputLabel for="type1" value="Type:" />
+            <h:inputText id="type1" value="#{userProfileBean.project1.type}" required="true" />
+
+            <h:outputLabel for="link1" value="Link:" />
+            <h:inputText id="link1" value="#{userProfileBean.project1.link}" />
+
+            <h:outputLabel for="keywords1" value="Key Words (use comma to separate) :" />
+            <h:inputText id="keywords1" value="#{userProfileBean.project1.keywordsAsString}" />
+
+            <h:outputLabel for="collaborators1" value="Collaborators (use comma to separate) :" />
+            <h:inputText id="collaborators1" value="#{userProfileBean.project1.collaboratorsAsString}" />
+
+            <h2>Project 2</h2>
+            <h:outputLabel for="title2" value="Title:" />
+            <h:inputText id="title2" value="#{userProfileBean.project2.title}" required="true" />
+
+            <h:outputLabel for="summary2" value="Summary:" />
+            <h:inputTextarea id="summary2" value="#{userProfileBean.project2.summary}" required="true" />
+
+            <h:outputLabel for="type2" value="Type:" />
+            <h:inputText id="type2" value="#{userProfileBean.project2.type}" required="true" />
+
+            <h:outputLabel for="link2" value="Link:" />
+            <h:inputText id="link2" value="#{userProfileBean.project2.link}" />
+
+            <h:outputLabel for="keywords2" value="Key Words (use comma to separate) :" />
+            <h:inputText id="keywords2" value="#{userProfileBean.project2.keywordsAsString}" />
+
+            <h:outputLabel for="collaborators2" value="Collaborators (use comma to separate) :" />
+            <h:inputText id="collaborators2" value="#{userProfileBean.project2.collaboratorsAsString}" />
+
+            <div class="userButton-container">
+                <h:commandButton value="Confirm" type="button" onclick="nextSection('project-detail');" styleClass="user-button" />
+            </div>
+        </div>
+
+        <!-- Color Scheme Section -->
+        <div id="color-scheme" class="profile-form hidden">
+            <h:outputLabel for="scheme" value="Choose your favorite color scheme:" />
+            <h:inputText id="scheme" value="#{userProfileBean.profile.colorScheme}"/>
+            <div class="image-container">
+                <h:graphicImage library="images" name="color_scheme.png"  styleClass="image"/>
+            </div>
+            <div class="userButton-container">
+                <h:commandButton value="Confirm" type="button" onclick="nextSection('color-scheme');" styleClass="user-button" />
+            </div>
+        </div>
+
+        <!-- Background and Font Section -->
+        <div id="background-and-font" class="profile-form hidden">
+            <h:outputLabel for="font" value="Font (input number) :" />
+            <h:inputText id="font" value="#{userProfileBean.profile.font}"/>
+
+            <div class="image-container">
+                <h:graphicImage library="images" name="font.png"  styleClass="image"/>
+            </div>
+
+            <h:outputLabel for="font-size" value="Size (recommend value 18) :" />
+            <h:inputText id="font-size" value="#{userProfileBean.profile.fontSize}"/>
+
+            <div class="userButton-container">
+                <h:commandButton value="Save and View Now!" action="#{userProfileBean.saveAll}" styleClass="save-button" />
+            </div>
+        </div>
+    </h:form>
+</h:body>
+</html>

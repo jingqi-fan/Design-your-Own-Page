@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <!-- Dynamic title that fetches the user's name from a managed bean -->
+    <title>#{showInfoBean.profile.name}'s Portfolio</title>
+    <!-- External CSS for specific page styling -->
+    <h:outputStylesheet library="css" name="page_example3.css" />
+</h:head>
+
+<h:body style="background: #{showInfoBean.colorScheme.color1}; font-family: #{showInfoBean.font.type}">
+    <!-- Include header from external file -->
+    <ui:include src="header.xhtml"/>
+
+    <div class="container">
+        <!-- Left Column for Personal Information -->
+        <div class="left-column">
+            <h1 style="font-size: 65px; color: #{showInfoBean.colorScheme.color4}">#{showInfoBean.profile.name}</h1>
+            <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Email: #{showInfoBean.profile.email}</p>
+            <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Linkedin: <h:outputLink value="#{showInfoBean.profile.linkedin}" target="_blank">#{showInfoBean.profile.linkedin}</h:outputLink></p>
+            <p style="font-size: #{showInfoBean.profile.fontSizeString}px">GitHub: <h:outputLink value="#{showInfoBean.profile.github}" target="_blank">#{showInfoBean.profile.github}</h:outputLink></p>
+            <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Phone: #{showInfoBean.profile.phone}</p>
+            <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Address: #{showInfoBean.profile.address}</p>
+        </div>
+
+        <!-- Right Column for Biography and Projects -->
+        <div class="right-column">
+            <!-- Biography section with dynamic styling -->
+            <div id="Biography" class="content-section" style="background: #{showInfoBean.colorScheme.color2}">
+                <h2>Biography</h2>
+                <p style="font-size: #{showInfoBean.profile.fontSizeString}px">#{showInfoBean.profile.bio}</p>
+            </div>
+
+            <!-- Projects section using ui:repeat to iterate over a list of projects -->
+            <div id="Projects" class="content-section" style="background: #{showInfoBean.colorScheme.color2}">
+                <h2>Projects</h2>
+                <ui:repeat value="#{showInfoBean.projects}" var="project" varStatus="status">
+                    <!-- Each project is displayed in a card with dynamic styles and repeated content -->
+                    <div class="project-card" style="background: #{showInfoBean.colorScheme.color3}">
+                        <h3>#{project.title}</h3>
+                        <p style="font-size: #{showInfoBean.profile.fontSizeString}px"><strong>Summary:</strong> #{project.summary}</p>
+                        <p style="font-size: #{showInfoBean.profile.fontSizeString}px"><strong>Keywords:</strong>
+                            <ui:repeat value="#{project.keywords}" var="keyword" varStatus="keywordStatus">
+                                #{keyword}#{keywordStatus.last ? '' : ', '}
+                            </ui:repeat>
+                        </p>
+                        <p style="font-size: #{showInfoBean.profile.fontSizeString}px"><strong>Collaborators:</strong>
+                            <ui:repeat value="#{project.collaborators}" var="collaborator" varStatus="collaboratorStatus">
+                                #{collaborator}#{collaboratorStatus.last ? '' : ', '}
+                            </ui:repeat>
+                        </p>
+                    </div>
+                </ui:repeat>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
