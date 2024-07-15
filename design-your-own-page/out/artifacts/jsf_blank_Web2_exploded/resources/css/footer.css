@@ -1,0 +1,9 @@
+/* Footer styles */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-size: 17px;
+}

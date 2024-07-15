@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+  <title>JSF 2.2: Blank Starting-Point Project</title>
+  <h:outputStylesheet library="css" name="styles.css" />
+  <h:outputScript library="js" name="common.js" />
+</h:head>
+<h:body>
+  <h1 class="title">JSF 2.2: Blank Starting-Point Project</h1>
+  <p>
+    <b>This is Page B.</b> If you started at index.jsf and navigated here
+    by clicking the button, the URL will still say index.jsf. When you press the button below, 
+    you will get the home page, but the URL will say page-b.jsf. This is normal; in JSF, the results page
+    shows the URL of the page containing the form. 
+  </p>
+  <div align="center">
+    <fieldset>
+      <legend>JSF Test Form</legend>
+      <h2>You entered "#{someBean.someProperty}"</h2>
+      <h:form>
+        <h:panelGrid columns="3">
+          <h:panelGroup>
+          <!-- Calls "someOtherActionControllerMethod" and uses return value as base name of page to navigate to. -->
+          <h:commandButton value="Return to Start Page" 
+                           action="#{someBean.someOtherActionControllerMethod}"/>
+          </h:panelGroup>
+          <h:panelGroup>
+          <!-- type="button" prevents button from submitting the form, and redisplaying the original page.
+               onclick sets the button click event handler.
+          -->
+          <h:commandButton value="JS Alert" type="button" onclick="showMessage()" />
+          </h:panelGroup>
+          <h:commandButton value="JS Message" type="button" onclick="insertMessage()" />
+        </h:panelGrid>
+      </h:form>
+    </fieldset>
+    <br />
+    <div id="insert"></div>  <!-- The insertMessage function inserts its text in this div. -->
+    <p>When making your own project based on jsf-blank, delete both this page and the index.xhtml
+       page, and copy/rename the example file (see the samples folder) instead.</p>
+    <p>Here are a couple of images of some Australian animals, as an example of including images on a page.</p>
+    <h:graphicImage library="images" name="koala.jpg" alt="Koala" /><br />
+    <h:graphicImage library="images" name="lorikeet.jpg" alt="Lorikeet" />
+    <!-- h:graphicImage is translated to an img tag by the JSF framework.
+         library is the sub-directory in the resources folder that contains the images.
+         name is the name of the image file.
+         You can use the other JSF attributes to apply a style or class.
+         See: https://www.tutorialspoint.com/jsf/jsf_graphicimage_tag.htm for an overview of the tag and its attributes.
+         See: https://javaee.github.io/glassfish/doc/5.0/vdldocs/jsp/h/graphicImage.html for the complete list of attributes.
+     -->
+  </div>
+</h:body>
+</html>

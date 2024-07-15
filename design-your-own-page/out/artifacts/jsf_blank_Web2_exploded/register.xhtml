@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Register Page</title>
+    <!-- External stylesheet for consistent formatting and design of the register form -->
+    <h:outputStylesheet library="css" name="loginStyle.css" />
+</h:head>
+<h:body>
+    <!-- Main container for the registration form -->
+    <div class="container">
+        <h:form>
+            <!-- Form group for username -->
+            <div class="form-group">
+                <h:outputLabel for="username" value="Username:" />
+                <h:inputText id="username" value="#{registerBean.username}" required="true" requiredMessage="Username is required." />
+            </div>
+
+            <!-- Form group for email -->
+            <div class="form-group">
+                <h:outputLabel for="email" value="Email:" />
+                <h:inputText id="email" value="#{registerBean.email}" required="true" requiredMessage="Email is required." type="email" />
+            </div>
+
+            <!-- Form group for password -->
+            <div class="form-group">
+                <h:outputLabel for="password" value="Password:" />
+                <h:inputSecret id="password" value="#{registerBean.password}" required="true" requiredMessage="Password is required." />
+            </div>
+
+            <!-- Form group for confirming password -->
+            <div class="form-group">
+                <h:outputLabel for="confirmPassword" value="Confirm Password:" />
+                <h:inputSecret id="confirmPassword" value="#{registerBean.confirmPassword}" required="true" requiredMessage="Confirm password is required." />
+            </div>
+
+            <!-- Button to submit the registration form -->
+            <div class="form-group">
+                <h:commandButton value="Register" action="#{registerBean.register}" styleClass="button" />
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="form-group">
+                <h:button value="Back to Login" outcome="/login" styleClass="register-button"/>
+            </div>
+            <div class="form-group">
+                <h:button value="Back to Home" outcome="/index" styleClass="index-button"/>
+            </div>
+        </h:form>
+    </div>
+</h:body>
+</html>

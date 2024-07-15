@@ -1,0 +1,160 @@
+/* designStyle.css */
+body {
+    font-family: Arial, sans-serif;
+    background: url("#{resource['images:background1.jpg']}") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header styles, including background color, text alignment, and padding */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #77a5d9;
+    font-size: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 48px;
+}
+
+/* Styling for header buttons */
+.header-button {
+    margin: 5px;
+    background-color: #e9bd77;
+    color: white;
+    border-radius: 50%;
+    width: 30px;       /* 控制按钮的大小 */
+    height: 30px;
+    text-align: center; /* 文字居中显示 */
+    line-height: 30px; /* 调整这个值使文字垂直居中 */
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+/* Container for user buttons with flexbox for alignment */
+.userButton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* 根据内容自动调整高度 */
+    padding: 20px; /* 适当增加一些内边距 */
+}
+
+/* Styling individual user buttons */
+.user-button {
+    margin-left: 30px;
+    margin-right: 10px;
+    background-color: #e9bd77;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Flex container for back button alignment */
+.back-container {
+    display: flex;
+    justify-content: flex-start; /* 使内容靠左对齐 */
+    flex-wrap: nowrap;
+}
+
+/* Styling for back button, including its hover effect */
+.back-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+/* Custom arrow design using CSS for the back button */
+.back-button::before {
+    content: "";
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 8px;
+    transform: rotate(+135deg);
+    border-color: #be8a53;
+}
+
+/* Styles for profile form container */
+.profile-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Styling for save button */
+.save-button {
+    background-color: #e9bd77;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Input and textarea styles within the profile form */
+.profile-form input[type="text"], .profile-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Helper class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Styling for color selection buttons */
+.color-button {
+    display: block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    width: 30%;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Styles for selected color buttons to indicate active selection */
+.color-button.selected {
+    background-color: #4CAF50;
+}
+
+/* Container for images with flexbox for center alignment */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for images within the image container */
+.image {
+    height: auto;
+    width: 1000px;
+    margin: 15px;
+}

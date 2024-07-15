@@ -1,0 +1,164 @@
+/* Fixed header styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Styling for left and right groups in the header, using flexbox for alignment */
+.left-group, .right-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Button styles with no border, rounded corners, and right margin for spacing */
+.head-button {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Positioning for dropdown menu elements */
+.dropbtn {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Default hidden dropdown content, shown on hover */
+.dropdown {
+    position: relative;
+}
+
+/* Styling for links inside the dropdown, with hover effects */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content h:link {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+}
+
+.dropdown-content h:link:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show content and change button background on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0056b3;
+}
+
+/* Profile section styling, centered with a flexible layout */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Large font size and text shadow for profile name */
+.profile-name {
+    font-size: 100px;
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Full viewport width and height for the profile top section */
+.profile-top {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Styling for profile info columns, including background color and shadow */
+.profile-info .column {
+    margin: 10px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Arrow container styling, centered horizontally */
+.arrow-container {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    margin: auto;
+}
+
+/* Arrow head positioning and styling */
+.arrow-head {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateX(-50%);
+}
+
+/* General content section styling with margins, padding, and rounded corners */
+.content-section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Project card styling with shadow and margin */
+.project-card{
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow */
+    border-radius: 20px;
+}

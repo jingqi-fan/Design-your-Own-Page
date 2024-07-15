@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <!-- Dynamic title based on the user profile name -->
+    <title>#{showInfoBean.profile.name}'s Portfolio</title>
+    <!-- Link to external CSS for styling -->
+    <h:outputStylesheet library="css" name="page_example2.css" />
+</h:head>
+<h:body style="background: #{showInfoBean.colorScheme.color1}; font-family: #{showInfoBean.font.type}">
+    <!-- Include header from external file -->
+    <ui:include src="header.xhtml"/>
+
+    <!-- Profile container with dynamic background and styling -->
+    <div class="profile" style="background: #{showInfoBean.colorScheme.color2}">
+        <!-- Profile top section displaying the name with dynamic styling -->
+        <div class="profile-top">
+            <h1 style="font-size: 55px; color: #{showInfoBean.colorScheme.color4}">#{showInfoBean.profile.name}</h1>
+        </div>
+
+        <!-- Profile bottom section with contact details and links -->
+        <div class="profile-bottom" style="border-top: 1px solid #{showInfoBean.colorScheme.color4}">
+            <div class="profile-info">
+                <!-- Left column for basic contact information -->
+                <div class="column">
+                    <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Email: #{showInfoBean.profile.email}</p>
+                    <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Phone: #{showInfoBean.profile.phone}</p>
+                    <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Address: #{showInfoBean.profile.address}</p>
+                </div>
+                <!-- Right column for social media and coding platform links -->
+                <div class="column">
+                    <p style="font-size: #{showInfoBean.profile.fontSizeString}px">Linkedin: <h:outputLink value="#{showInfoBean.profile.linkedin}" target="_blank">#{showInfoBean.profile.linkedin}</h:outputLink></p>
+                    <p style="font-size: #{showInfoBean.profile.fontSizeString}px">GitHub: <h:outputLink value="#{showInfoBean.profile.github}" target="_blank">#{showInfoBean.profile.github}</h:outputLink></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biography section with dynamic background -->
+    <div id="Biography" class="content-section" style="background: #{showInfoBean.colorScheme.color2}">
+        <h2>Biography</h2>
+        <p style="font-size: #{showInfoBean.profile.fontSizeString}px">#{showInfoBean.profile.bio}</p>
+    </div>
+
+    <!-- Projects/Talks section with grid layout -->
+    <div id="Talk" class="content-section" style="background: #{showInfoBean.colorScheme.color2}">
+        <h2>Projects</h2>
+        <div class="talk-container">
+        <ui:repeat value="#{showInfoBean.projects}" var="project" varStatus="status">
+            <!-- Repeatable items for projects or talks, displaying details dynamically -->
+            <div class="talk-item" style="background: #{showInfoBean.colorScheme.color3} ">
+                <h3>#{project.title}</h3>
+                <p style="font-size: #{showInfoBean.profile.fontSizeString}px"><strong>Summary:</strong> #{project.summary}</p>
+                <p style="font-size: #{showInfoBean.profile.fontSizeString}px"><strong>Keywords:</strong>
+                    <ui:repeat value="#{project.keywords}" var="keyword" varStatus="keywordStatus">
+                        #{keyword}#{keywordStatus.last ? '' : ', '}
+                    </ui:repeat>
+                </p>
+                <p style="font-size: #{showInfoBean.profile.fontSizeString}px"><strong>Collaborators:</strong>
+                    <ui:repeat value="#{project.collaborators}" var="collaborator" varStatus="collaboratorStatus">
+                        #{collaborator}#{collaboratorStatus.last ? '' : ', '}
+                    </ui:repeat>
+                </p>
+            </div>
+        </ui:repeat>
+        </div>
+    </div>
+</h:body>
+</html>
