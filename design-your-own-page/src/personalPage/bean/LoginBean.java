@@ -58,7 +58,7 @@ public class LoginBean {
             // Load database driver class
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql:///personalpage?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-            try (Connection connection = DriverManager.getConnection(url, "root", "Ff2004123");
+            try (Connection connection = DriverManager.getConnection(url, "root", "password");
                  PreparedStatement ps = connection.prepareStatement("SELECT * FROM users WHERE username = ? AND password = ?")) {
                 ps.setString(1, username);
                 ps.setString(2, password);
