@@ -76,7 +76,7 @@ public class ShowInfoBean {
     // Database connection details
     private static final String URL = "jdbc:mysql:///personalpage?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "Ff2004123";
+    private static final String PASSWORD = "password";
 
     /**
      * Initialization method that loads the latest profile and related entities after bean construction.
