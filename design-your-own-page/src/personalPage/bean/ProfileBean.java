@@ -158,7 +158,7 @@ public class ProfileBean {
     private Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         String url = "jdbc:mysql:///personalpage?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-        return DriverManager.getConnection(url, "root", "Ff2004123");
+        return DriverManager.getConnection(url, "root", "password");
     }
 }
 
