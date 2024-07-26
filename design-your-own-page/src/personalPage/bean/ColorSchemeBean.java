@@ -21,7 +21,7 @@ public class ColorSchemeBean {
     // JDBC database credentials
     private final String JDBC_URL = "jdbc:mysql://localhost:3306/personalpage";
     private final String USER = "root";
-    private final String PASSWORD = "Ff2004123";
+    private final String PASSWORD = "password";
 
     @PostConstruct
     public void init() {
