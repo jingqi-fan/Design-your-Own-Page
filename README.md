@@ -1,5 +1,5 @@
 # Design-your-Own-Page
-**Final assignment in course Web Development Technologies**
+**Final assignment in course ___Web Development Technologies___**
 
 ![image](images/index.png)
 ## function
