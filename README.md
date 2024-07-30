@@ -2,7 +2,7 @@
 **Final assignment in course ___Web Development Technologies___**
 
 ![image](images/index.png)
-## function
+## Function
 ### 1. View Sample Pages
 - **Exploration**: Before signing in, users can explore various sample pages. These pages demonstrate the diverse designs and layouts available, providing a glimpse of what they can create.
 
