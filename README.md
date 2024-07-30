@@ -1,5 +1,6 @@
 # Design-your-Own-Page
-Final assignment in course Web Development Technologies
+**Final assignment in course Web Development Technologies**
+
 ![image](images/index.png)
 ## function
 ### 1. View Sample Pages
@@ -7,6 +8,7 @@ Final assignment in course Web Development Technologies
 
 ### 2. Login and Register
 - **Access Management**: Users need to register for an account to access personalized features. The registration process captures basic credentials like email and password. Once registered, users can log in to proceed with personalizing their site.
+  
 ![image](images/login.png)
 
 ### 3. Input Personal Information
@@ -17,6 +19,7 @@ Final assignment in course Web Development Technologies
 ### 4. Generate Personalized Page
 - **Customization and Generation**:  Based on the choices and information provided, a personalized website is generated. This allows users to see their content integrated into the chosen template, ensuring the final product aligns with their aesthetic preferences and functional requirements.
 - **Example:**
+  
 ![image](images/template.jpg)
 
 ## Refenrence
