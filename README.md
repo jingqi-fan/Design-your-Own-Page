@@ -14,7 +14,7 @@ Final assignment in course Web Development Technologies
 - **Customization and Generation**:  Based on the choices and information provided, a personalized website is generated. This allows users to see their content integrated into the chosen template, ensuring the final product aligns with their aesthetic preferences and functional requirements.
 
 ## Main Page
-![image](https://github.com/jingqi-fan/Design-your-Own-Page/tree/main/images/index.png)
+![image](images/index.png)
 
 
 ## Refenrence
