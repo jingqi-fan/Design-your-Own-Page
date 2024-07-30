@@ -11,13 +11,13 @@ Final assignment in course Web Development Technologies
 
 ### 3. Input Personal Information
 - **Personalization Input**: After logging in, users are prompted to input their personal information and project details. Users can also select their preferred color schemes and fonts. This step is crucial for tailoring the website to reflect their individual or professional identity.
+
 ![image](images/scheme.png)
 
 ### 4. Generate Personalized Page
 - **Customization and Generation**:  Based on the choices and information provided, a personalized website is generated. This allows users to see their content integrated into the chosen template, ensuring the final product aligns with their aesthetic preferences and functional requirements.
 - **Example:**
-![image](images/template.ipg)
-
+![image](images/template.jpg)
 
 ## Refenrence
 - **background image**: https://www.weibo.com/p/1005051646592141/home?mod=TAB
