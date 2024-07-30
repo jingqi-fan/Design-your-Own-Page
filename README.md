@@ -16,8 +16,8 @@ Final assignment in course Web Development Technologies
 ### 4. Generate Personalized Page
 - **Customization and Generation**:  Based on the choices and information provided, a personalized website is generated. This allows users to see their content integrated into the chosen template, ensuring the final product aligns with their aesthetic preferences and functional requirements.
 - **Example:**
-![image](images/template.png)
+![image](images/template.ipg)
 
 
 ## Refenrence
-background image: https://www.weibo.com/p/1005051646592141/home?mod=TAB
+- **background image**: https://www.weibo.com/p/1005051646592141/home?mod=TAB
